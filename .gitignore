@@ -1,0 +1,8 @@
+# build output
+/fanout/fanout
+/fanout/bin/
+*.out
+*.test
+# mutation testing scratch
+.gremlins*
+.DS_Store

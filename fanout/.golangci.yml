@@ -1,0 +1,5 @@
+issues:
+  exclude-rules:
+    # Test setup ignores errors on purpose (temp dirs, fixtures).
+    - path: _test\.go
+      linters: [errcheck]
