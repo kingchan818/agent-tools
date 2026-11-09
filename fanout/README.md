@@ -23,7 +23,25 @@ make install          # builds ./fanout into ~/.local/bin
 fanout install-skill  # teaches Claude Code to use it (~/.claude/skills/fanout)
 ```
 
+Or take a release (macOS and Linux, arm64 and amd64):
+
+```sh
+go install github.com/kingchan818/agent-tools/fanout/cmd/fanout@latest
+# or download fanout_<version>_<os>_<arch>.tar.gz from GitHub Releases
+```
+
 Needs `hc` (herdr-core) and the agent CLIs you use on `PATH`.
+
+### Releasing
+
+Set `Version` in `internal/cli/cli.go`, commit, then push a prefixed tag:
+
+```sh
+git tag fanout/v0.2.0 && git push origin fanout/v0.2.0
+```
+
+`.github/workflows/release-fanout.yml` tests, checks that the tag matches
+`Version`, builds the four binaries and publishes the GitHub release.
 
 ## Use
 
