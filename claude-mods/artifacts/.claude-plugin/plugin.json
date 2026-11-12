@@ -1,0 +1,6 @@
+{
+  "name": "artifacts",
+  "version": "0.1.0",
+  "description": "A pane beside the chat listing the pages, images and PDFs Claude made, to open, reveal, copy or mention",
+  "types": "./types/index.d.ts"
+}
